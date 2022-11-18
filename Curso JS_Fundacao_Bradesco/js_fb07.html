@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' >
+
+</head>
+    <body>
+
+        <form name="formcalend" action="" method="post">
+            Digite o mês (01 a 12): <input type="text" name="f_mes" size="4" maxlength="2" /><p></p>
+            <input type="button" name="btn_processar" value="processar" onclick="verificames()"/>
+            <input type="reset" name="btn_cancelar" value="cancelar"/><p></p>
+            O Mês correspondente :  <input type="text" name="f_nomesmes" size="18" maxlength="15" />
+        </form>
+
+    
+    </body>
+
+    <script language="script">
+
+        var js_mes;
+
+        function verificames(){
+
+        js_mes=parseInt(document,formcalend.f_mes.value);
+
+        switch (js_mes){    
+            case 01 :document.formcalend.f_nomesmes.value = 'janeiro'; break;
+            case 02 :document.formcalend.f_nomesmes.value = 'Fevereiro'; break;
+            case 03 :document.formcalend.f_nomesmes.value = 'março'; break;
+            case 04 :document.formcalend.f_nomesmes.value = 'abril'; break;
+            case 05 :document.formcalend.f_nomesmes.value = 'maio'; break;
+            case 06 :document.formcalend.f_nomesmes.value = 'junho'; break;
+            case 07 :document.formcalend.f_nomesmes.value = 'julho'; break;
+            case 08 :document.formcalend.f_nomesmes.value = 'agosto'; break;
+            case 09 :document.formcalend.f_nomesmes.value = 'setembro'; break;
+            case 10 :document.formcalend.f_nomesmes.value = 'outubro'; break;
+            case 11 :document.formcalend.f_nomesmes.value = 'novembro'; break;
+            case 12 :document.formcalend.f_nomesmes.value = 'dezembro'; break;
+            default : document.formcalend.f_nomesmes.value = 'Mes Invalido'; break;
+        }
+        }
+    </script>
+
+</html>
